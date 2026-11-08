@@ -1,0 +1,17 @@
+services:
+  game:
+    build:
+      context: ..
+      dockerfile: server/Dockerfile
+    ports:
+      - "127.0.0.1:8787:8787"
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8787
+      DATA_DIR: /data
+      COOKIE_SECURE: "1"
+    volumes:
+      - triangle-worlds:/data
+    restart: unless-stopped
+volumes:
+  triangle-worlds:

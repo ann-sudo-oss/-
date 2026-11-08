@@ -1,0 +1,6 @@
+**/data
+**/.lock
+**/.env
+**/*.log
+.git
+work
